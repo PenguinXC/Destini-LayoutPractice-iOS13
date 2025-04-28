@@ -8,4 +8,27 @@
 
 import Foundation
 
+struct StoryBrain {
+    var storyIndex = 0
+    
+    let stories = [
+        Story(title: "You see a fork in the road.", choice0: "Take a left.", choice1: "Take a right."),
+        Story(title: "You see a tiger.", choice0: "Shout for help.", choice1: "Play dead."),
+        Story(title: "You find a treasure chest.", choice0: "Open it.", choice1: "Check for traps.")
+    ]
+    
+    func getStoryTitle() -> String {
+        return stories[storyIndex].title
+    }
+    
+    func getChoice0() -> String {
+        return stories[storyIndex].choice0
+    }
+    
+    func getChoice1() -> String {
+        return stories[storyIndex].choice1
+    }
+}
+
+
 
