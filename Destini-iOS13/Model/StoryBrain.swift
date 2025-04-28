@@ -28,6 +28,14 @@ struct StoryBrain {
     func getChoice1() -> String {
         return stories[storyIndex].choice1
     }
+    
+    mutating func nextStory(_ choice: String) {
+        if choice == stories[storyIndex].choice0 {
+            storyIndex = 1 // Move to the next story index based on the choice
+        } else {
+            storyIndex = 2 // Move to the next story index based on the choice
+        }
+    }
 }
 
 
